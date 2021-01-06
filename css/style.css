@@ -224,7 +224,51 @@ form span a:hover::after {
 		order: inherit;
 	}
 	.sidebar .image {
-		width: 100px;
+		width: 120px;
+		height: 120px;
+	}
+	.sidebar h1 {
+		font-size: 20px;
+		width: 100%;
+		display: grid;
+		place-items:center;
+	}
+	.sidebar span {
+		display: none;
+	}
+	.support {
+		display: block;
+		margin-top: 200px;
+	}
+	.support .text {
+		text-align: center;
+		margin-bottom: 60px;
+	}
+	.support .logo .logos {
+		place-items:center;
+	}
+}
+
+@media (max-width: 400px) {
+	.container {
+		display: block;
+		text-align: center;
+	}
+	form {
+		margin-left: -50px;
+	}
+	.input-field {
+		width: 300px;
+	}
+	.input-field input {
+		width: 250px;
+		font-size: 1.2em;
+	}
+	.sidebar {
+		order: inherit;
+	}
+	.sidebar .image {
+		width: 120px;
 		height: 120px;
 	}
 	.sidebar h1 {
