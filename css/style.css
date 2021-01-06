@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+body {
+	overflow-x: hidden;
+	background-color: #e6dfd5;
+}
+body,
+input {
+  font-family: "Poppins", sans-serif;
+  color: #444;
+}
+ul {
+	list-style: none;
+}
+.container {
+	width: 90%;
+	height: 500px;
+	margin: auto;
+	margin-top: 50px;
+	display: grid;
+	align-content: space-around;
+	grid-template-columns: 1fr 1.5fr;
+}
+form {
+	padding-left: 50px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance:none;
+	margin: 0;
+}
+.input-field {
+  width: 380px;
+  border-bottom: 1px solid #000;
+  margin: 10px 0;
+  height: 60px;
+}
+.input-field i {
+	line-height: 75px;
+	font-size: 1.3em;
+}
+.input-field input {
+	width: 340px;
+	background:none;
+	outline: none;
+	border:none;
+	font-size: 1.3em;
+}
+form button {
+	width: 100px;
+	border:none;
+	outline: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-family: "Poppins", sans-serif;
+	border-radius: 25px;
+	border: 2px solid #5995fd;
+	color: #5995fd;
+	padding: 5px;
+	margin-top: 15px;
+	font-size: 1em;
+	float: right;
+    transition: all 0.25s ease;
+}
+form button:hover {
+	background: #5995fd;
+	color: #ddd;
+}
+form span {
+	display: none;
+} 
+.sidebar {
+	order: 2;
+	display: grid;
+	place-items:center;
+	/*margin-top: 20px;*/
+}
+.sidebar .image {
+	width: 250px;
+	height: 250px;
+}
+.sidebar i {
+	font-size: 1.5em;
+	vertical-align: middle;
+}
+.sidebar span {
+	font-size: 1.2em;
+}
+.sidebar span a {
+	color: #444;
+	text-decoration: none;
+	position: relative;
+}
+.sidebar span a::after {
+	content: '';
+	background:#f78;
+	width: calc(100% + 3px);
+	height: 0;
+	bottom: -4px;
+	left: -2px;
+	position: absolute;
+	transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	z-index: -1;
+}
+span a:hover {
+	color: #fff;
+}
+.sidebar span a:hover::after {
+	height: calc(100% + 8px);
+}
+
+.support {
+	width: 90%;
+	margin:auto;
+	margin-top: 80px;
+	display: grid;
+	grid-template-areas: 'support logo logo logo logo logo'
+						'support logo logo logo logo logo';
+}
+.support .text {
+	grid-area: support;
+}
+.support .logo {
+	grid-area: logo;
+}
+.support .logo .logos {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap:20px;
+}
+
+.footer {
+	width: 90%;
+	margin: auto;
+	margin-top: 70px;
+	text-align: center;
+}
+
+
+/* sd view */
+@media (max-width: 1200px) {
+.sidebar .image {
+	width: 180px;
+	height: 200px;
+}
+.sidebar h1 {
+	font-size: 1em;
+}
+.sidebar i {
+	font-size: 1.5em;
+	vertical-align: middle;
+}
+.sidebar span a {
+	color: #444;
+	text-decoration: none;
+	position: relative;
+}	
+}
+
+/* tablet view*/
+@media (max-width: 1000px){
+	.container {
+		display: block;
+	}
+	form {
+		padding-left: 0;
+		display: grid;
+		place-items:center;
+	}
+	.sidebar {
+	}
+	.sidebar span {
+		display: none;
+	}
+	form span {
+		display: inline;
+		float: left;
+		margin-top: 20px;
+	}
+	form span a {
+	color: #444;
+	text-decoration: none;
+	position: relative;
+}
+form span a::after {
+	content: '';
+	background:#f78;
+	width: calc(100% + 3px);
+	height: 0;
+	bottom: -4px;
+	left: -2px;
+	position: absolute;
+	transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	z-index: -1;
+}
+form span a:hover {
+	color: #fff;
+}
+form span a:hover::after {
+	height: calc(100% + 8px);
+}
+	button {
+		margin-bottom: 2em;
+	}
+	.support {
+		display: block;
+		margin-top: 15em;
+	}
+	.support .logo .logos {
+		place-items:center;
+	}
+}
+/* mobile view */
+@media (max-width: 576px) {
+	.container {
+		display: block;
+	}
+	form {
+		padding-left: 0;
+	}
+	.input-field {
+		width: 380px;
+	}
+	.sidebar {
+		order: inherit;
+	}
+	.sidebar .image {
+		width: 100px;
+		height: 120px;
+	}
+	.sidebar h1 {
+		font-size: 20px;
+		width: 100%;
+		display: grid;
+		place-items:center;
+	}
+	.sidebar span {
+		display: none;
+	}
+	.support {
+		display: block;
+		margin-top: 200px;
+	}
+	.support .text {
+		text-align: center;
+		margin-bottom: 60px;
+	}
+	.support .logo .logos {
+		place-items:center;
+	}
+}
